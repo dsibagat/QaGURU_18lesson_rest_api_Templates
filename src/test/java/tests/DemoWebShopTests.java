@@ -29,4 +29,20 @@ public class DemoWebShopTests extends TestBase {
                         .body("success", is(true))
                         .extract().response();
     }
+ @Test
+    void sendMailToFriendTest() {
+        Map<String, String> cookies = new Auth().login();
+        String body = readStringFromFile("./src/test/resources/bodyForMail.txt");
+
+        Response response =
+                given()
+                        .contentType("application/x-www-form-urlencoded; charset=UTF-8")
+                        .cookies(cookies)
+                        .body(body)
+                        .when()
+                        .post("/productemailafriend/53")
+                        .then()
+                        .statusCode(200)
+                        .extract().response();
+    }
 }

@@ -1,0 +1,4 @@
+FriendEmail:test@d.ss
+YourEmailAddress:dsib@d.sib
+PersonalMessage: lisen to me
+send-email:Send+email
