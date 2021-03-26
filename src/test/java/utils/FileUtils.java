@@ -19,5 +19,4 @@ public class FileUtils {
     public static String readStringFromFile(String filePath) {
         return new String(readBytesFromFile(filePath));
     }
-
 }
