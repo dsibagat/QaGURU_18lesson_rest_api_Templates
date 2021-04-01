@@ -26,10 +26,10 @@ public class DemoWebShopTests extends TestBase {
 
     @Test
     void sendMailToFriendTest() {
-        String body = readStringFromFile("./src/test/resources/bodyForMail.txt");
+        String bodyForMail = readStringFromFile("./src/test/resources/bodyForMail.txt");
 
         Response response = given()
-                .spec(Spec.request(body))
+                .spec(Spec.request(bodyForMail))
                 .when()
                 .post("/productemailafriend/53")
                 .then()
