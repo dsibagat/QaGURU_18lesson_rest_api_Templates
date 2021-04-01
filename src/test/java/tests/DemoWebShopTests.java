@@ -22,8 +22,8 @@ public class DemoWebShopTests extends TestBase {
 
     @Test
     public Response sendMailToFriendTest() {
-        String body = readStringFromFile("./src/test/resources/bodyForMail.txt");
-        return Spec.request(body).when()
+        String bodyForMail = readStringFromFile("./src/test/resources/bodyForMail.txt");
+        return Spec.request(bodyForMail).when()
                 .post("/productemailafriend/53")
                 .then()
                 .statusCode(200)
