@@ -1,11 +1,8 @@
 package tests;
 
-import api.Auth;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import spec.Spec;
-
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
