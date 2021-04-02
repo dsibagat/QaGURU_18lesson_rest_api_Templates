@@ -4,7 +4,6 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import config.ConfigHelper;
 import io.qameta.allure.selenide.AllureSelenide;
-import io.restassured.RestAssured;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -17,7 +16,6 @@ public class DriverHelper {
         addListener("allure", new AllureSelenide());
 
         Configuration.baseUrl = ConfigHelper.getWebUrl();
-        RestAssured.baseURI = ConfigHelper.getWebUri();
         Configuration.startMaximized = true;
 
         if (ConfigHelper.isRemoteWebDriver()) {

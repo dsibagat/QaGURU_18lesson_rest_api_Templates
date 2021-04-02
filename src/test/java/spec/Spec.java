@@ -2,7 +2,6 @@ package spec;
 
 import api.Auth;
 import io.restassured.specification.RequestSpecification;
-import tests.TestBase;
 
 import java.util.Map;
 

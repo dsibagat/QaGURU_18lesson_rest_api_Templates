@@ -61,6 +61,14 @@ tasks.withType(Test) {
     }
 }
 
-test {
-    useJUnitPlatform()
+task web(type: Test) {
+    useJUnitPlatform {
+        includeTags "web"
+    }
+}
+
+task api(type: Test) {
+    useJUnitPlatform {
+        includeTags "api"
+    }
 }

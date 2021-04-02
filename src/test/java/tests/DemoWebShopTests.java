@@ -1,6 +1,7 @@
 package tests;
 
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import spec.Spec;
 
@@ -8,7 +9,8 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static utils.FileUtils.readStringFromFile;
 
-public class DemoWebShopTests extends TestBase {
+@Tag("api")
+public class DemoWebShopTests extends TestBaseApi {
     @Test
     void addToWishListTest() {
         String body = readStringFromFile("./src/test/resources/body.txt");

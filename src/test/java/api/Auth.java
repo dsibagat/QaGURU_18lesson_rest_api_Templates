@@ -1,7 +1,6 @@
 package api;
 
 import config.ConfigHelper;
-import tests.TestBase;
 
 import java.util.Map;
 

@@ -4,7 +4,6 @@ import config.ConfigHelper;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
-import tests.TestBase;
 
 import java.util.Map;
 
@@ -14,7 +13,8 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.restassured.RestAssured.given;
 
-public class LoginTests extends TestBase {
+@Tag("api")
+public class LoginTests extends TestBaseApi {
 
     @Test
     void loginWithCookieTest() {
@@ -32,7 +32,7 @@ public class LoginTests extends TestBase {
                         .extract().cookies();
 
         // verify successful authorization
-        open("http://demowebshop.tricentis.com/Themes/DefaultClean/Content/images/logo.png");
+        open("/Themes/DefaultClean/Content/images/logo.png");
         getWebDriver().manage().addCookie(new Cookie("Nop.customer", cookiesMap.get("Nop.customer")));
         getWebDriver().manage().addCookie(new Cookie("NOPCOMMERCE.AUTH", cookiesMap.get("NOPCOMMERCE.AUTH")));
         getWebDriver().manage().addCookie(new Cookie("ARRAffinity", cookiesMap.get("ARRAffinity")));
