@@ -1,6 +1,6 @@
 package spec;
 
-import api.Auth;
+import apiAuth.Auth;
 import io.restassured.specification.RequestSpecification;
 
 import java.util.Map;

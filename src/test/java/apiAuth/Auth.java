@@ -1,4 +1,4 @@
-package api;
+package apiAuth;
 
 import config.ConfigHelper;
 
