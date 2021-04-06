@@ -11,5 +11,6 @@ public class TestBaseApi {
     public static void beforeAll() {
         RestAssured.baseURI = ConfigHelper.getWebUri();
         Configuration.baseUrl = ConfigHelper.getWebUrl();
+        Configuration.timeout = 10000;
     }
 }
