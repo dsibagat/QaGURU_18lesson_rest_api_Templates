@@ -70,9 +70,9 @@ task web(type: Test) {
     }
 }
 
-task api(type: Test) {
+task test_api(type: Test) {
     useJUnitPlatform {
-        includeTags "api"
+        includeTags "test_api"
     }
 }
 
