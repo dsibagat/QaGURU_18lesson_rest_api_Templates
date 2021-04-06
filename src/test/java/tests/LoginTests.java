@@ -12,8 +12,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.restassured.RestAssured.given;
+import static tameplate.ReportTemplate.filters;
 
-@Tag("api")
+@Tag("web")
 public class LoginTests extends TestBaseApi {
 
     @Test
@@ -24,6 +25,7 @@ public class LoginTests extends TestBaseApi {
                         .contentType("application/x-www-form-urlencoded; charset=UTF-8")
                         .formParam("Email", ConfigHelper.getUsername())
                         .formParam("Password", ConfigHelper.getPassword())
+                        .filter(filters().customTemplates())
                         .when()
                         .post("/login")
                         .then()
