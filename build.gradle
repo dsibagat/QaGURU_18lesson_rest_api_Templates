@@ -72,3 +72,7 @@ task api(type: Test) {
         includeTags "api"
     }
 }
+
+test {
+    useJUnitPlatform()
+}

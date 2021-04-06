@@ -1,6 +1,5 @@
 package tests;
 
-import io.restassured.response.Response;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import spec.Spec;
@@ -15,7 +14,7 @@ public class DemoWebShopTests extends TestBaseApi {
     void addToWishListTest() {
         String body = readStringFromFile("./src/test/resources/body.txt");
 
-        Response response = given()
+        given()
                 .spec(Spec.request(body))
                 .when()
                 .post("/addproducttocart/details/53/2")
@@ -30,7 +29,7 @@ public class DemoWebShopTests extends TestBaseApi {
     void sendMailToFriendTest() {
         String bodyForMail = readStringFromFile("./src/test/resources/bodyForMail.txt");
 
-        Response response = given()
+        given()
                 .spec(Spec.request(bodyForMail))
                 .when()
                 .post("/productemailafriend/53")
