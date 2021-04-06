@@ -2,6 +2,7 @@ package tests;
 
 import config.ConfigHelper;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 
@@ -14,7 +15,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.restassured.RestAssured.given;
 import static tameplate.ReportTemplate.filters;
 
-@Tag("api")
+@Tags({@Tag("web"), @Tag("api")})
 public class LoginTests extends TestBaseApi {
 
     @Test
