@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static utils.FileUtils.readStringFromFile;
 
-@Tag("test_api")
+@Tag("notWeb")
 public class DemoWebShopTests extends TestBaseApi {
     @Test
     void addToWishListTest() {

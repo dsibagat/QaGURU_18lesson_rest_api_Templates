@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-@Tag("test_api")
+@Tag("web")
 public class RegistrationTest extends TestBase {
     @Test
     void successesRegistration() {

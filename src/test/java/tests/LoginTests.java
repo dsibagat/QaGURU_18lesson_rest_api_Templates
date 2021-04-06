@@ -15,7 +15,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.restassured.RestAssured.given;
 import static tameplate.ReportTemplate.filters;
 
-@Tag("web")
+@Tag("notWeb")
 public class LoginTests extends TestBaseApi {
 
     @Test
